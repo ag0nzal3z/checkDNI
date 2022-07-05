@@ -40,8 +40,13 @@ class DNI():
         
         
 
-    def conversion(self, number, word):
-        pass
+    def wordGet(self, number, word):
+        control = int(number) % self.__secret_number
+        letter = self.__secret_dni[control]
+        resultado = str(number) + letter
+        return resultado
+
     
     def generator(self, total):
+        lista_dni_generados = []
         pass
