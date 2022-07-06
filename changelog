@@ -1,3 +1,14 @@
+[V0.1 (2022-07-06)]
+
+* Se crea el metodo "numberGet" que permite la generacion de 'n' numeros de dni mediante solamente la letra que asignemos 
+* Se crean los test para el metodo "numberGet"
+
 [V0.1 (2022-05-07)]
 
 * El programa permite validar si un "dni español" es correcto o incorrecto
+
+[EQUIPO DESARROLLO]
+
+* Propietario del poyecto: Alberto González
+* Desarrollador del proyecto: Alberto González
+* Documentacion del proyecto: Alberto González
