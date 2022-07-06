@@ -71,8 +71,9 @@ class DNI():
             #print(letra_numero_generado)
             if letra_numero_generado.lower() == word:
                 dni = str(numero_aleatorio)+letra_numero_generado.lower()
-                self.__lista_numeros_generados.append(dni)
-                contador = contador + 1
+                if dni not in self.__lista_numeros_generados:
+                    self.__lista_numeros_generados.append(dni)
+                    contador = contador + 1
                 
         return self.__lista_numeros_generados
     
