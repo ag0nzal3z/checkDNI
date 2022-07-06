@@ -35,10 +35,10 @@ if __name__ == "__main__":
     conversion = dni.wordGet(numero, letra)
     print(conversion)
     
-    
-    
+    # Test de obtencion de numeros de dni a traves de la letra
+    dni = DNI()
+    dni_generados = dni.numberGet("h", 20)
+    print(dni_generados)
     
     # Test de generacion de n numeros de dni validos
-    dni = DNI()
-    numero_dni_generar = 100
-    
+    #dni = DNI()
