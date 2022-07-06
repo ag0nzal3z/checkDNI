@@ -1,3 +1,4 @@
+import random
 
 
 class DNI():
@@ -46,7 +47,28 @@ class DNI():
         resultado = str(number) + letter
         return resultado
 
+    # En desarrollo
+    def numberGet(self, word, veces):
+        contador = 0
+        #print("Antes del bucle")
+        while contador < veces:
+            #print(contador)
+            contador = contador + 1
+            #print(contador)
+            numero_aleatorio = random.randrange(00000000, 99999999)    
+            print(numero_aleatorio)    
+            #print(type(numero_aleatorio))
+            if len(str(numero_aleatorio)) < 8:
+                print("Tiene 7 digitos, le agregamos 0 delante")
+                numero_aleatorio = str(numero_aleatorio).rjust(8, '0')
+                print(numero_aleatorio)
+            
+            resto_numero_aleatorio = int(numero_aleatorio) % self.__secret_number
+            print(resto_numero_aleatorio)
+            letra_numero_generado = self.__secret_dni[resto_numero_aleatorio]
+            print(letra_numero_generado)
+            
+    
     
     def generator(self, total):
-        lista_dni_generados = []
         pass
