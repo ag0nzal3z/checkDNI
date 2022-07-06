@@ -5,7 +5,8 @@ class DNI():
     
     def __init__(self):
         self.__secret_dni = "TRWAGMYFPDXBNJZSQVHLCKE"
-        self.__secret_number = 23    
+        self.__secret_number = 23
+        self.__lista_numeros_generados = [] 
     
     
     def check_input_data(self, number, word):
@@ -48,13 +49,13 @@ class DNI():
         return resultado
 
     # En desarrollo
-    def numberGet(self, word, veces):
-        lista_numeros_generados = []
+    def numberGet(self, word, numDniGenerar):
+        #lista_numeros_generados = []
         contador = 0
         #print("Antes del bucle")
-        while contador < veces:
+        while contador < numDniGenerar:
             #print(contador)
-            contador = contador + 1
+            #contador = contador + 1
             #print(contador)
             numero_aleatorio = random.randrange(00000000, 99999999)    
             #print(numero_aleatorio)    
@@ -67,11 +68,13 @@ class DNI():
             resto_numero_aleatorio = int(numero_aleatorio) % self.__secret_number
             #print(resto_numero_aleatorio)
             letra_numero_generado = self.__secret_dni[resto_numero_aleatorio]
-            print(letra_numero_generado)
+            #print(letra_numero_generado)
             if letra_numero_generado.lower() == word:
                 dni = str(numero_aleatorio)+letra_numero_generado.lower()
-                lista_numeros_generados.append(dni)
-        return lista_numeros_generados
+                self.__lista_numeros_generados.append(dni)
+                contador = contador + 1
+                
+        return self.__lista_numeros_generados
     
     def generator(self, total):
         pass
