@@ -1,5 +1,10 @@
 [V0.1 (2022-07-06)]
 
+* Se crea el metodo "generatorRandomDni" que permite la generacion de 'n' numeros aleatorios validos de dni
+* Se crean los test para el metodo "generatorRandomDni"
+
+[V0.1 (2022-07-06)]
+
 * Se crea el metodo "numberGet" que permite la generacion de 'n' numeros de dni mediante solamente la letra que asignemos 
 * Se crean los test para el metodo "numberGet"
 
