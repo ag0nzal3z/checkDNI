@@ -77,5 +77,20 @@ class DNI():
                 
         return self.__lista_numeros_generados
     
-    def generator(self, total):
-        pass
+    def generatorRandomDni(self, numDniGenerar):
+        
+        contador = 0
+        while contador < numDniGenerar:
+            numero_aleatorio = random.randrange(00000000, 99999999)
+            
+            if len(str(numero_aleatorio)) < 8:
+                numero_aleatorio = str(numero_aleatorio).rjust(8, '0')
+
+            resto_numero_aleatorio = int(numero_aleatorio) % self.__secret_number
+            letra_numero_generado = self.__secret_dni[resto_numero_aleatorio]
+            dni = str(numero_aleatorio)+letra_numero_generado.lower()
+            if dni not in self.__lista_numeros_generados:
+                self.__lista_numeros_generados.append(dni)
+                contador = contador + 1
+            
+        return self.__lista_numeros_generados
