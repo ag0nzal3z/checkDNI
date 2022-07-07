@@ -42,4 +42,6 @@ if __name__ == "__main__":
     print(dni_generados)
     
     # Test de generacion de n numeros de dni validos
-    #dni = DNI()
+    dni = DNI()
+    dni_aleatorios_generados = dni.generatorRandomDni(50)
+    print(dni_aleatorios_generados)
