@@ -1,6 +1,6 @@
 from tkinter import *
-
-
+from clases import DNI
+from tkinter import messagebox
 
 
 def check_dni_windows():
