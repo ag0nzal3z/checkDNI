@@ -1,3 +1,13 @@
+[V0.1 (2022-07-18)]
+
+* Se crea la funcion que valida si un dni es correcto desde la interfaz grafica
+* Se realizan pruebas de integridad
+
+[V0.1 (2022-07-17)]
+
+* Se crea el directorio "files" que contendra los iconos, imagenes, etc...
+* Se comienza a trabajar en la interfaz grafica
+
 [V0.1 (2022-07-06)]
 
 * Se crea el metodo "generatorRandomDni" que permite la generacion de 'n' numeros aleatorios validos de dni
