@@ -1,7 +1,8 @@
 from tkinter import *
 #from funciones import check_dni_windows
-
-
+from clases import DNI
+from tkinter import messagebox
+#from tkinter import ttk
 
 root = Tk()
 root.title("Check DNI")
@@ -10,6 +11,19 @@ root.resizable(False, False)
 root.iconbitmap("files/icono_titulo.ico")
 
 
+def checker(num):
+    #messagebox.showinfo(message=num, title="Tests")
+    #print(num)
+    dni = DNI()
+    numero = num
+    num = num[0:8]
+    lett = numero[-1]
+    #print(num)
+    #print(lett)
+    check = dni.check_input_data(num, lett)
+    state = dni.verification(num, lett)
+    print(state)
+    return state
 
 def check_dni_windows():
     window = Toplevel()
@@ -17,7 +31,7 @@ def check_dni_windows():
     window.iconbitmap("files/icono_titulo.ico")
     window.geometry("230x160")
     window.resizable(False, False)
-    
+    window.grab_set()
     
     mensaje1 = Label(window, text="Introduce el DNI: ")
     mensaje1.grid(row=0, padx=5, pady=5)
@@ -25,10 +39,9 @@ def check_dni_windows():
     entrada_dni = Entry(window, width=35)
     entrada_dni.grid(row=1, padx=5, pady=5)
 
-    boton_validar = Button(window, text="VERIFICAR")
+    boton_validar = Button(window, text="VERIFICAR", command= lambda: checker(entrada_dni.get()) )
     boton_validar.grid(row=4, padx=20, pady=25)
-
-
+    window.mainloop()
 
 
 # Pantalla Principal
