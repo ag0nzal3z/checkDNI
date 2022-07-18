@@ -11,6 +11,7 @@ root.resizable(False, False)
 root.iconbitmap("files/icono_titulo.ico")
 
 
+
 def checker(num):
     #messagebox.showinfo(message=num, title="Tests")
     #print(num)
@@ -23,7 +24,8 @@ def checker(num):
     check = dni.check_input_data(num, lett)
     state = dni.verification(num, lett)
     print(state)
-    return state
+    messagebox.showinfo(message=state, title="Estado DNI")
+    #return state
 
 def check_dni_windows():
     window = Toplevel()
@@ -41,6 +43,13 @@ def check_dni_windows():
 
     boton_validar = Button(window, text="VERIFICAR", command= lambda: checker(entrada_dni.get()) )
     boton_validar.grid(row=4, padx=20, pady=25)
+    
+    salida = Label(window, text ="Esto es una prueba"  )
+    salida.grid(row=5)
+    
+    
+    
+    
     window.mainloop()
 
 
