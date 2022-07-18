@@ -24,18 +24,13 @@ def check_dni_windows():
     
     
 def checker(num):
-    #messagebox.showinfo(message=num, title="Tests")
-    #print(num)
     dni = DNI()
     numero = num
     num = num[0:8]
     lett = numero[-1]
-    #print(num)
-    #print(lett)
     check = dni.check_input_data(num, lett)
     state = dni.verification(num, lett)
-    print(state)
-    return state
+    messagebox.showinfo(message=state, title="Estado DNI")
     
     
     
