@@ -1,9 +1,5 @@
 from tkinter import *
-#from funciones import check_dni_windows
-from clases import DNI
-from tkinter import messagebox
-#from tkinter import ttk
-from funciones import checker, check_dni_windows, generar_dni_windows
+from funciones import check_dni_windows, generar_dni_windows
 
 root = Tk()
 root.title("Check DNI")
