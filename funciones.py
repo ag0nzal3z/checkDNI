@@ -21,7 +21,25 @@ def check_dni_windows():
     boton_validar.grid(row=4, padx=20, pady=25)
     window.mainloop()
     
+def generar_dni_windows():
+    window = Toplevel()
+    window.title("Generar DNI")
+    window.iconbitmap("files/icono_titulo.ico")
+    window.geometry("230x160")
+    window.resizable(False, False)
+    window.grab_set()
     
+    mensaje1 = Label(window, text="Introduce el numero de DNI a generar: ")
+    mensaje1.grid(row=0, padx=5, pady=5)
+    
+    numero_dni_generar = Entry(window, width=35)
+    numero_dni_generar.grid(row=1, padx=5, pady=5)
+    
+    boton_generar = Button(window, text="GENERAR", command= lambda: generar(numero_dni_generar.get()) )
+    boton_generar.grid(row=4, padx=20, pady=25)
+    
+    window.mainloop()
+
     
 def checker(num):
     dni = DNI()
@@ -34,19 +52,8 @@ def checker(num):
     
     
     
+def generar(numero):
+    dni = DNI()
+    dni_generados = dni.generatorRandomDni(int(numero))
+    messagebox.showinfo(message=dni_generados, title="DNI Generados")
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-# https://programacionfacil.org/cursos/tkinter/capitulo_15_nuevas_ventanas_con_toplevel.html
