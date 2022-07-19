@@ -1,3 +1,8 @@
+[V0.1 (2022-07-19)]
+
+* Se crea la funcion que genera numeros aleatorios de dni
+* Se realizan pruebas de generacion de numeros aleatorios
+
 [V0.1 (2022-07-18)]
 
 * Se crea la funcion que valida si un dni es correcto desde la interfaz grafica
