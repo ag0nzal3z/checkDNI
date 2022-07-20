@@ -1,5 +1,5 @@
 from tkinter import *
-from clases import DNI
+from files.clases import DNI
 from tkinter import messagebox
 
 
@@ -57,3 +57,13 @@ def generar(numero):
     dni_generados = dni.generatorRandomDni(int(numero))
     messagebox.showinfo(message=dni_generados, title="DNI Generados")
     
+
+
+def menu_acerca_de():
+    pass
+
+def menu_licencia():
+    pass
+
+def menu_contacto():
+    pass

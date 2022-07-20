@@ -1,5 +1,5 @@
 from tkinter import *
-from funciones import check_dni_windows, generar_dni_windows
+from files.funciones import check_dni_windows, generar_dni_windows
 
 root = Tk()
 root.title("Check DNI")

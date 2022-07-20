@@ -1,5 +1,5 @@
 import PySimpleGUI as sg
-from clases import DNI
+from files.clases import DNI
 
 layout = [  [sg.Text("Numero de DNI")],
             [sg.Input()],
