@@ -1,5 +1,5 @@
 from tkinter import *
-from files.funciones import check_dni_windows, generar_dni_windows
+from files.funciones import check_dni_windows, generar_dni_windows, menu_acerca_de, menu_contacto
 
 root = Tk()
 root.title("Check DNI")
@@ -28,10 +28,10 @@ menu_archivo.add_command(label="Salir", command=root.quit)
 menubar.add_cascade(label="Archivo", menu=menu_archivo)
 
 menu_ayuda = Menu(menubar, tearoff=0)
-menu_ayuda.add_command(label="Acerca de checkDNI", command="Comando")
+menu_ayuda.add_command(label="Acerca de checkDNI", command=menu_acerca_de)
 menu_ayuda.add_command(label="Licencia", command="Comando")
 menu_ayuda.add_separator()
-menu_ayuda.add_command(label="Contacto", command="Comando")
+menu_ayuda.add_command(label="Contacto", command=menu_contacto)
 menubar.add_cascade(label="Ayuda", menu=menu_ayuda)
 
 

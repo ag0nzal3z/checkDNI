@@ -60,10 +60,27 @@ def generar(numero):
 
 
 def menu_acerca_de():
-    pass
+    mensaje_acerca_de = """
+    
+    Este programa ha sido programado con fines educativos
+    
+    Se ha creado usando:
+    
+        * Python 3.10.2
+    
+    No se han utilizado librerias de terceros externas a la instalacion de Python
+    
+    """
+    messagebox.showinfo(message=mensaje_acerca_de, title="Acerca de checkDNI")
+
 
 def menu_licencia():
     pass
 
 def menu_contacto():
-    pass
+    mensaje_contacto = """
+    Autor: Alberto González
+    Email: Bertito@protonmail.com
+    Github: ag0nzal3z
+    """
+    messagebox.showinfo(message=mensaje_contacto, title="Contacto")
