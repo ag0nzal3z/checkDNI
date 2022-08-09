@@ -30,13 +30,16 @@ def generar_dni_windows():
     window.grab_set()
     
     mensaje1 = Label(window, text="Introduce el numero de DNI a generar: ")
-    mensaje1.grid(row=0, padx=5, pady=5)
+    mensaje1.grid(row=0, column=1, padx=5, pady=5)
     
     numero_dni_generar = Entry(window, width=35)
-    numero_dni_generar.grid(row=1, padx=5, pady=5)
+    numero_dni_generar.grid(row=1, column=1, padx=5, pady=5)
     
     boton_generar = Button(window, text="GENERAR", command= lambda: generar(numero_dni_generar.get()) )
-    boton_generar.grid(row=4, padx=20, pady=25)
+    boton_generar.grid(row=2, column=1, padx=20, pady=10)
+    
+    boton_generar_en_archivo = Button(window, text="GENERAR EN ARCHIVO", command= lambda: generar_en_archivo(numero_dni_generar.get()) )
+    boton_generar_en_archivo.grid(row=3, column=1, padx=20, pady=5)
     
     window.mainloop()
 
@@ -57,6 +60,11 @@ def generar(numero):
     dni_generados = dni.generatorRandomDni(int(numero))
     messagebox.showinfo(message=dni_generados, title="DNI Generados")
     
+
+def generar_en_archivo(numero):
+    dni = DNI()
+    dni_generados = dni.generatorRandomDni(int(numero))
+    pass
 
 
 def menu_acerca_de():
