@@ -1,6 +1,7 @@
 from tkinter import *
 from files.clases import DNI
 from tkinter import messagebox
+from tkinter import filedialog
 
 
 def check_dni_windows():
@@ -64,8 +65,10 @@ def generar(numero):
 def generar_en_archivo(numero):
     dni = DNI()
     dni_generados = dni.generatorRandomDni(int(numero))
-    pass
-
+    fichero = filedialog.asksaveasfile(
+        title="Guardar un fichero", mode='w', defaultextension=".txt")
+    fichero.write(str(dni_generados))
+    fichero.close()
 
 def menu_acerca_de():
     mensaje_acerca_de = """
