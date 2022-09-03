@@ -45,3 +45,12 @@ if __name__ == "__main__":
     dni = DNI()
     dni_aleatorios_generados = dni.generatorRandomDni(50)
     print(dni_aleatorios_generados)
+    
+    # Test de medidas de la pantalla en la que se ejecuta el programa
+    import tkinter as tk
+    pantalla_ordenador = tk.Tk()
+    def medidas_monitor(r):
+        altura_pantalla = r.winfo_screenheight()
+        anchura_pantalla = r.winfo_screenwidth()
+        print(f"Altura de pantalla: {altura_pantalla}\nAnchura de pantalla: {anchura_pantalla}")
+    medidas_monitor(pantalla_ordenador)

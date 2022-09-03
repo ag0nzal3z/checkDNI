@@ -2,12 +2,16 @@ from tkinter import *
 from files.clases import DNI
 from tkinter import messagebox
 from tkinter import filedialog
-
+import platform
+computer_os = platform.system()
 
 def check_dni_windows():
     window = Toplevel()
     window.title("Validar DNI")
-    window.iconbitmap("files/icono_titulo.ico")
+    if computer_os != "Linux":
+           window.iconbitmap("files/icono_titulo.ico")
+    else:
+       window.iconbitmap("@files/icono_titulo.xbm")
     window.geometry("230x160")
     window.resizable(False, False)
     window.grab_set()
@@ -25,7 +29,10 @@ def check_dni_windows():
 def generar_dni_windows():
     window = Toplevel()
     window.title("Generar DNI")
-    window.iconbitmap("files/icono_titulo.ico")
+    if computer_os != "Linux":
+        window.iconbitmap("files/icono_titulo.ico")
+    else:
+        window.iconbitmap("@files/icono_titulo.xbm")
     window.geometry("180x160")
     window.resizable(False, False)
     window.grab_set()

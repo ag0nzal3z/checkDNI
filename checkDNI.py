@@ -1,11 +1,16 @@
 from tkinter import *
 from files.funciones import check_dni_windows, generar_dni_windows, menu_acerca_de, menu_contacto
+from files.funciones import computer_os
 
 root = Tk()
 root.title("Check DNI")
 root.geometry("240x160")
 root.resizable(False, False)
-root.iconbitmap("files/icono_titulo.ico")
+if computer_os != "Linux":
+    root.iconbitmap("files/icono_titulo.ico")
+else:
+    root.iconbitmap("@files/icono_titulo.xbm")
+
 
 
 
