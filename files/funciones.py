@@ -26,14 +26,14 @@ def generar_dni_windows():
     window = Toplevel()
     window.title("Generar DNI")
     window.iconbitmap("files/icono_titulo.ico")
-    window.geometry("230x160")
+    window.geometry("180x160")
     window.resizable(False, False)
     window.grab_set()
     
-    mensaje1 = Label(window, text="Introduce el numero de DNI a generar: ")
+    mensaje1 = Label(window, text="Numero DNIs generar: ")
     mensaje1.grid(row=0, column=1, padx=5, pady=5)
     
-    numero_dni_generar = Entry(window, width=35)
+    numero_dni_generar = Entry(window, width=10, justify=CENTER)
     numero_dni_generar.grid(row=1, column=1, padx=5, pady=5)
     
     boton_generar = Button(window, text="GENERAR", command= lambda: generar(numero_dni_generar.get()) )
@@ -64,9 +64,11 @@ def generar(numero):
 
 def generar_en_archivo(numero):
     dni = DNI()
-    dni_generados = dni.generatorRandomDni(int(numero))
     fichero = filedialog.asksaveasfile(
         title="Guardar un fichero", mode='w', defaultextension=".txt")
+    dni_generados = dni.generatorRandomDni(int(numero))
+    #proceso = messagebox.showinfo(message="Se esta generado el archivo")
+    #proceso
     fichero.write(str(dni_generados))
     fichero.close()
 

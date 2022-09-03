@@ -36,3 +36,11 @@ En estos momentos se pueden generar de 1 a 5000
 los numeros generados mediante el raton, ni teclado
 
 ![dni_generados](files/screenshots/dnis_generados.png)
+
+### Sistemas Operativos Soportados
+
+Requiere Python 3.10 o superior instalado en los Sistemas Operativos compatibles
+
+- Windows 10
+
+- Windows 11
