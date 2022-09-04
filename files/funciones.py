@@ -9,9 +9,9 @@ def check_dni_windows():
     window = Toplevel()
     window.title("Validar DNI")
     if computer_os != "Linux":
-           window.iconbitmap("files/icono_titulo.ico")
+        window.iconbitmap("files/icono_titulo.ico")
     else:
-       window.iconbitmap("@files/icono_titulo.xbm")
+        window.iconbitmap("@files/icono_titulo.xbm")
     window.geometry("230x160")
     window.resizable(False, False)
     window.grab_set()
@@ -95,7 +95,19 @@ def menu_acerca_de():
 
 
 def menu_licencia():
-    pass
+    licencia = """
+    
+    https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es
+    
+    https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.es
+    
+    """
+    window = Toplevel()
+    window.title("Licencia")
+    window.geometry("470x200")
+    imagen = PhotoImage(file="files/licencia.png")
+    fondo = Label(window, image=imagen).place(x=0, y=0)
+    window.mainloop()
 
 def menu_contacto():
     mensaje_contacto = """
