@@ -54,3 +54,23 @@ if __name__ == "__main__":
         anchura_pantalla = r.winfo_screenwidth()
         print(f"Altura de pantalla: {altura_pantalla}\nAnchura de pantalla: {anchura_pantalla}")
     medidas_monitor(pantalla_ordenador)
+    
+    
+    # Test archivo log
+    def create_file_log():
+        name_log = "cdni.log"
+        import os
+        from datetime import datetime
+        exist_log = os.path.isfile(name_log)
+        print(exist_log)
+        
+        if exist_log == False:
+            now = datetime.now()
+            file = open(name_log, "w")
+            file.write(f"Inicio Archivo Log  {now}")
+            file.close()
+            print("Se ha creado el archivo")
+        else:
+            print("El archivo de log ya existe, no es necesario crearlo")
+        
+    create_file_log()
