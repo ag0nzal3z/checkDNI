@@ -59,14 +59,19 @@ def checker(num):
     lett = numero[-1]
     check = dni.check_input_data(num, lett)
     state = dni.verification(num, lett)
-    messagebox.showinfo(message=state, title="Estado DNI")
-    
-    
-    
+    if state == "Correcto":
+        messagebox.showinfo(message=state, title="Estado DNI")
+    elif state == "Incorrecto":
+        messagebox.showerror(message=state, title="Estado DNI")
+
+
 def generar(numero):
     dni = DNI()
-    dni_generados = dni.generatorRandomDni(int(numero))
-    messagebox.showinfo(message=dni_generados, title="DNI Generados")
+    if int(numero) > 4000:
+        messagebox.showerror(message="El numero de DNIs a generar no puede ser superior a 4000", title="ERROR Generacion DNIs")
+    else:
+        dni_generados = dni.generatorRandomDni(int(numero))
+        messagebox.showinfo(message=dni_generados, title="DNI Generados")
     
 
 def generar_en_archivo(numero):
@@ -74,8 +79,6 @@ def generar_en_archivo(numero):
     fichero = filedialog.asksaveasfile(
         title="Guardar un fichero", mode='w', defaultextension=".txt")
     dni_generados = dni.generatorRandomDni(int(numero))
-    #proceso = messagebox.showinfo(message="Se esta generado el archivo")
-    #proceso
     fichero.write(str(dni_generados))
     fichero.close()
 
