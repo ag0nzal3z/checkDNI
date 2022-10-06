@@ -4,6 +4,7 @@ from tkinter import messagebox
 from tkinter import filedialog
 import platform
 computer_os = platform.system()
+from datetime import datetime
 
 def check_dni_windows():
     window = Toplevel()
@@ -119,3 +120,30 @@ def menu_contacto():
     Github: ag0nzal3z
     """
     messagebox.showinfo(message=mensaje_contacto, title="Contacto")
+    
+    
+
+# Funcion que controlara la creacion de un log para depurar errores y ver el uso que se le da al programa
+# No guardara ningun tipo de informacion confidencial
+def create_file_log():
+    name_log = "cdni.log"
+    import os
+    #from datetime import datetime
+    exist_log = os.path.isfile(name_log)
+    #print(exist_log)
+    
+    if exist_log == False:
+        now = datetime.now()
+        file = open(name_log, "w")
+        file.write(f"{now} ==> Inicio Archivo Log\n")
+        file.close()
+
+
+
+# Funcion que va a gestionar los mensajes que se guardan en el log
+def write_in_log(message, name_log):
+    now = datetime.now()
+    file = open(name_log, "a")
+    file.write(f"{now} ==> {message}\n")
+    file.close()
+    

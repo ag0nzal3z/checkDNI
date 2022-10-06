@@ -1,4 +1,5 @@
 from clases import DNI
+from datetime import datetime
 
 
 
@@ -67,10 +68,19 @@ if __name__ == "__main__":
         if exist_log == False:
             now = datetime.now()
             file = open(name_log, "w")
-            file.write(f"Inicio Archivo Log  {now}")
+            file.write(f"{now} ==> Inicio Archivo Log\n")
             file.close()
             print("Se ha creado el archivo")
         else:
             print("El archivo de log ya existe, no es necesario crearlo")
         
     create_file_log()
+    
+    # Test escritura mensajes en el log
+    def write_in_log(message, name_log):
+        now = datetime.now()
+        file = open(name_log, "a")
+        file.write(f"{now} ==> {message}\n")
+        file.close()
+        
+    write_in_log("Test de escritura en log", "cdni.log")

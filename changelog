@@ -1,3 +1,7 @@
+[V0.2 (2022-10-06)]
+
+* Creacion funcion que genera un log al arrancar el programa
+
 [V0.2 (2022-10-02)]
 
 * Se limita el numero maximo de dnis generados de una sola vez de forma aleatoria a 4000
