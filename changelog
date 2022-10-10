@@ -1,3 +1,7 @@
+[V0.2 (2022-10-10)]
+
+* Se eliminan las funciones que gestionan los logs y se crea una clase para tal fin
+
 [V0.2 (2022-10-06)]
 
 * Creacion funcion que genera un log al arrancar el programa
