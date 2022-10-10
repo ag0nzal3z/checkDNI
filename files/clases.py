@@ -108,16 +108,14 @@ class Logs():
     
     
     def create_file_log(self):
-        
+        now = datetime.now().isoformat(timespec='seconds')
         exist_log = os.path.isfile(self.__name_log)
-    
+        
         if exist_log == False:
-            now = datetime.now().isoformat(timespec='seconds')
             file = open(self.__name_log, "w")
             file.write(f"{now} ==> Inicio Archivo Log\n")
             file.close()
         elif exist_log == True:
-            now = datetime.now().isoformat(timespec='seconds')
             file = open(self.__name_log, "a")
             file.write(f"{now} ==> Inicio CheckDNI\n")
             file.close()

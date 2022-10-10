@@ -66,7 +66,7 @@ if __name__ == "__main__":
         print(exist_log)
         
         if exist_log == False:
-            now = datetime.now()
+            now = datetime.now().isoformat(timespec='seconds')
             file = open(name_log, "w")
             file.write(f"{now} ==> Inicio Archivo Log\n")
             file.close()
@@ -78,7 +78,7 @@ if __name__ == "__main__":
     
     # Test escritura mensajes en el log
     def write_in_log(message, name_log):
-        now = datetime.now()
+        now = datetime.now().isoformat(timespec='seconds')
         file = open(name_log, "a")
         file.write(f"{now} ==> {message}\n")
         file.close()
