@@ -10,9 +10,9 @@ def check_dni_windows():
     window = Toplevel()
     window.title("Validar DNI")
     if computer_os != "Linux":
-        window.iconbitmap("files/icono_titulo.ico")
+        window.iconbitmap("files/images/icono_titulo.ico")
     else:
-        window.iconbitmap("@files/icono_titulo.xbm")
+        window.iconbitmap("@files/images/icono_titulo.xbm")
     window.geometry("230x160")
     window.resizable(False, False)
     window.grab_set()
@@ -31,9 +31,9 @@ def generar_dni_windows():
     window = Toplevel()
     window.title("Generar DNI")
     if computer_os != "Linux":
-        window.iconbitmap("files/icono_titulo.ico")
+        window.iconbitmap("files/images/icono_titulo.ico")
     else:
-        window.iconbitmap("@files/icono_titulo.xbm")
+        window.iconbitmap("@files/images/icono_titulo.xbm")
     window.geometry("180x160")
     window.resizable(False, False)
     window.grab_set()
@@ -111,7 +111,7 @@ def menu_licencia():
     window = Toplevel()
     window.title("Licencia")
     window.geometry("470x200")
-    imagen = PhotoImage(file="files/licencia.png")
+    imagen = PhotoImage(file="files/images/licencia.png")
     fondo = Label(window, image=imagen).place(x=0, y=0)
     window.mainloop()
 

@@ -17,9 +17,9 @@ def main():
     
     # OS en el que se ejecuta, para optimizar la multiplataforma
     if computer_os != "Linux":
-        root.iconbitmap("files/icono_titulo.ico")
+        root.iconbitmap("files/images/icono_titulo.ico")
     else:
-        root.iconbitmap("@files/icono_titulo.xbm")
+        root.iconbitmap("@files/images/icono_titulo.xbm")
 
 
     # Pantalla Principal
