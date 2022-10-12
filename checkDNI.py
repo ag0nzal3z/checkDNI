@@ -41,6 +41,7 @@ def main():
     menu_ayuda = Menu(menubar, tearoff=0)
     menu_ayuda.add_command(label="Acerca de checkDNI", command=menu_acerca_de)
     menu_ayuda.add_command(label="Licencia", command=menu_licencia)
+    menu_ayuda.add_command(label="Idioma", command='')  # En desarrollo
     menu_ayuda.add_separator()
     menu_ayuda.add_command(label="Contacto", command=menu_contacto)
     menubar.add_cascade(label="Ayuda", menu=menu_ayuda)

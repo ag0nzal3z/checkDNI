@@ -1,0 +1,16 @@
+{
+    "es": {
+        "btn_validar": "Validar DNI",
+        "btn_generar": "Generar DNI",
+        "men_bar_1": "Archivo",
+        "men_arch": "Salir",
+        "men_bar_2": "Ayuda",
+        "men_ayu": "Acerca de checkDNI",
+        "men_ayu_1": "Licencia",
+        "men_ayu_2": "Idioma",
+        "men_ayu_3": "Contacto",
+        "KEY_test": "VALUE_test"
+    }
+
+
+}

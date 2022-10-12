@@ -1,6 +1,6 @@
 from clases import DNI
 from datetime import datetime
-
+from languajes import Languajes
 
 
 
@@ -84,3 +84,9 @@ if __name__ == "__main__":
         file.close()
         
     write_in_log("Test de escritura en log", "cdni.log")
+
+
+    # Test Languajes
+    lan = Languajes()
+    test_lan = lan.load_languaje('es')
+    print(test_lan)
