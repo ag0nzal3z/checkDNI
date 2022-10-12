@@ -90,3 +90,4 @@ if __name__ == "__main__":
     lan = Languajes()
     test_lan = lan.load_languaje('es')
     print(test_lan)
+    print(test_lan['btn_validar'])

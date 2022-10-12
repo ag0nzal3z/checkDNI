@@ -9,7 +9,7 @@ class Languajes():
         self.__lanDefault = "es"
     
     
-    def load_languaje(self, languaje):
+    def load_languaje(self, languaje='es'):
         exist_lan = os.path.isfile(self.__lanFile)
         #print(exist_lan)
         if exist_lan == True:
@@ -17,10 +17,7 @@ class Languajes():
             diccionario = json.load(idiomas)
             idioma_seleccionado = diccionario[languaje]
             return idioma_seleccionado
-    
-    def lan_default(self):
-        pass
-    
+
 
 
 
@@ -33,3 +30,4 @@ if __name__ == "__main__":
     lan = Languajes()
     test_lan = lan.load_languaje('es')
     print(test_lan)
+    
