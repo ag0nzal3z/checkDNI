@@ -9,7 +9,8 @@
         "men_ayu_1": "Licencia",
         "men_ayu_2": "Idioma",
         "men_ayu_3": "Contacto",
-        "KEY_test": "VALUE_test"
+        "KEY_test": "VALUE_test",
+        "btn_veri": "VERIFICAR"
     },
     "en": {
         "btn_validar": "Validate DNI",
@@ -21,7 +22,8 @@
         "men_ayu_1": "License",
         "men_ayu_2": "Languaje",
         "men_ayu_3": "Contact",
-        "KEY_test": "VALUE_test"
+        "KEY_test": "VALUE_test",
+        "btn_veri": "CHECK"
     }
 
 
