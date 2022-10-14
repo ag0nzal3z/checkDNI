@@ -130,7 +130,20 @@ def menu_contacto():
     messagebox.showinfo(message=mensaje_contacto, title="Contacto")
     
 def menu_idiomas():
-    pass
+    window = Toplevel()
+    window.title("Selector Idioma")
+    window.geometry("200x200")
+    
+    btn_idi1 = Button(window, text="ID 1", command= lambda:[lan.save_select_languaje('es'), window.destroy() ])
+    btn_idi1.grid(row=1, column=1, padx=5, pady=5)
+    
+    btn_idi2 = Button(window, text="ID 2", command= lambda:[lan.save_select_languaje('en'), window.destroy() ] )
+    btn_idi2.grid(row=2, column=1, padx=5, pady=5)
+    
+    btn_idi3 = Button(window, text="ID 3", command= '' )
+    btn_idi3.grid(row=3, column=1, padx=5, pady=5)
+    
+    window.mainloop()
 
 
 
@@ -170,7 +183,7 @@ def main():
     menu_ayuda = Menu(menubar, tearoff=0)
     menu_ayuda.add_command(label=select_lan['men_ayu'], command=menu_acerca_de)
     menu_ayuda.add_command(label=select_lan['men_ayu_1'], command=menu_licencia)
-    menu_ayuda.add_command(label=select_lan['men_ayu_2'], command='')  # En desarrollo
+    menu_ayuda.add_command(label=select_lan['men_ayu_2'], command=menu_idiomas)  # En desarrollo
     menu_ayuda.add_separator()
     menu_ayuda.add_command(label=select_lan['men_ayu_3'], command=menu_contacto)
     menubar.add_cascade(label=select_lan['men_bar_2'], menu=menu_ayuda)

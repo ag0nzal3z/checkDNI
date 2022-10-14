@@ -31,6 +31,11 @@ class Languajes():
         file.close()
         return content
 
+    def save_select_languaje(self, selection):
+        file = open(self.__lanConfDefault, 'w')
+        file.write(selection)
+        file.close()
+        
 
 # PRUEBAS DURANTE EL DESARROLLO
 if __name__ == "__main__":

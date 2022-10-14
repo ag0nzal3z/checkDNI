@@ -1,6 +1,10 @@
+[V0.2 (2022-10-14)]
+
+* Gestion de la seleccion de idioma mediante funcion lambda
+
 [V0.2 (2022-10-12)]
 
-* Optimicacion del codigo
+* Optimizacion del codigo
 * Unificacion de las imagenes, screenshot, iconos dentro del directorio images
 * Se crea la clase que gestionara el idioma de la interfaz
 

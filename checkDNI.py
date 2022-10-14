@@ -1,10 +1,3 @@
-#from tkinter import *
-#from files.funciones import check_dni_windows, generar_dni_windows, menu_acerca_de, menu_contacto, menu_licencia
-#from files.funciones import computer_os
-
-from files.clases import Logs
-logs = Logs()
-
 from files.languajes import Languajes
 lan = Languajes()
 
