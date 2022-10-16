@@ -132,16 +132,23 @@ def menu_contacto():
 def menu_idiomas():
     window = Toplevel()
     window.title("Selector Idioma")
-    window.geometry("200x200")
+    window.geometry("140x100")
     
-    btn_idi1 = Button(window, text="ID 1", command= lambda:[lan.save_select_languaje('es'), window.destroy() ])
+    #btn_img1 = PhotoImage(file = "files\images\idioma\Spain.png")
+    #size_img1 = btn_img1.subsample(1, 1)
+    
+    #btn_idi1 = Button(window, text="Castellano",image=size_img1, command= lambda:[lan.save_select_languaje('es'), window.destroy() ])
+    btn_idi1 = Button(window, text="Castellano", command= lambda:[lan.save_select_languaje('es'), window.destroy() ])
     btn_idi1.grid(row=1, column=1, padx=5, pady=5)
     
-    btn_idi2 = Button(window, text="ID 2", command= lambda:[lan.save_select_languaje('en'), window.destroy() ] )
-    btn_idi2.grid(row=2, column=1, padx=5, pady=5)
+    btn_idi2 = Button(window, text="Ingles", command= lambda:[lan.save_select_languaje('en'), window.destroy() ] )
+    btn_idi2.grid(row=1, column=2, padx=5, pady=5)
     
-    btn_idi3 = Button(window, text="ID 3", command= '' )
-    btn_idi3.grid(row=3, column=1, padx=5, pady=5)
+    #btn_idi3 = Button(window, text="ID 3", command= '' )
+    #btn_idi3.grid(row=2, column=1, padx=5, pady=5)
+    
+    #btn_idi4 = Button(window, text="ID 3", command= '' )
+    #btn_idi4.grid(row=2, column=2, padx=5, pady=5)
     
     window.mainloop()
 
