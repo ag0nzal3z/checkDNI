@@ -1,0 +1,30 @@
+{
+    "es": {
+        "btn_validar": "Validar DNI",
+        "btn_generar": "Generar DNI",
+        "men_bar_1": "Archivo",
+        "men_arch": "Salir",
+        "men_bar_2": "Ayuda",
+        "men_ayu": "Acerca de checkDNI",
+        "men_ayu_1": "Licencia",
+        "men_ayu_2": "Idioma",
+        "men_ayu_3": "Contacto",
+        "KEY_test": "VALUE_test",
+        "btn_veri": "VERIFICAR"
+    },
+    "en": {
+        "btn_validar": "Validate DNI",
+        "btn_generar": "Generate DNI",
+        "men_bar_1": "File",
+        "men_arch": "Exit",
+        "men_bar_2": "Help",
+        "men_ayu": "About checkDNI",
+        "men_ayu_1": "License",
+        "men_ayu_2": "Languaje",
+        "men_ayu_3": "Contact",
+        "KEY_test": "VALUE_test",
+        "btn_veri": "CHECK"
+    }
+
+
+}

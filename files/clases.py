@@ -1,4 +1,6 @@
 import random
+import os
+from datetime import datetime
 
 
 class DNI():
@@ -94,3 +96,33 @@ class DNI():
                 contador = contador + 1
             
         return self.__lista_numeros_generados
+    
+    
+    
+class Logs():
+    
+    
+    def __init__(self):
+        self.__name_log = "cdni.log"
+        #self.__timelog = datetime.now().isoformat(timespec='seconds')
+    
+    
+    def create_file_log(self):
+        now = datetime.now().isoformat(timespec='seconds')
+        exist_log = os.path.isfile(self.__name_log)
+        
+        if exist_log == False:
+            file = open(self.__name_log, "w")
+            file.write(f"{now} ==> Inicio Archivo Log\n")
+            file.close()
+        elif exist_log == True:
+            file = open(self.__name_log, "a")
+            file.write(f"{now} ==> Inicio CheckDNI\n")
+            file.close()
+
+
+    def write_in_log(self, message):
+        now = datetime.now().isoformat(timespec='seconds')
+        file = open(self.__name_log, "a")
+        file.write(f"{now} ==> {message}\n")
+        file.close()
