@@ -135,6 +135,7 @@ def menu_idiomas():
     window = Toplevel()
     window.title("Selector Idioma")
     window.geometry("140x100")
+    # Para los idiomas se usa ISO 639-1
     
     #btn_img1 = PhotoImage(file = "files\images\idioma\Spain.png")
     #size_img1 = btn_img1.subsample(1, 1)
@@ -149,8 +150,14 @@ def menu_idiomas():
     btn_idi3 = Button(window, text="Frances", command= lambda:[lan.save_select_languaje('fr'), window.destroy() ] )
     btn_idi3.grid(row=2, column=1, padx=5, pady=5)
     
-    #btn_idi4 = Button(window, text="ID 3", command= '' )
-    #btn_idi4.grid(row=2, column=2, padx=5, pady=5)
+    btn_idi4 = Button(window, text="Aleman", command= lambda:[lan.save_select_languaje('de'), window.destroy() ] )
+    btn_idi4.grid(row=2, column=2, padx=5, pady=5)
+    
+    #btn_idi5 = Button(window, text="Italiano", command= lambda:[lan.save_select_languaje('it'), window.destroy() ] )
+    #btn_idi5.grid(row=3, column=1, padx=5, pady=5)
+    
+    #btn_idi6 = Button(window, text="Islandes", command= lambda:[lan.save_select_languaje('is'), window.destroy() ] )
+    #btn_idi6.grid(row=2, column=2, padx=5, pady=5)
     
     window.mainloop()
 
