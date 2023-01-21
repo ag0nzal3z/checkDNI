@@ -1,7 +1,8 @@
+# -*- coding: utf-8 -*-
+
 import random
 import os
 from datetime import datetime
-
 
 class DNI():
     

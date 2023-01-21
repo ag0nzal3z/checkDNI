@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from clases import DNI
 from datetime import datetime
 from languajes import Languajes

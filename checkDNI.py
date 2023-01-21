@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from files.languajes import Languajes
 lan = Languajes()
 

@@ -24,6 +24,19 @@
         "men_ayu_3": "Contact",
         "KEY_test": "VALUE_test",
         "btn_veri": "CHECK"
+    },
+    "fr": {
+        "btn_validar": "Valider le DNI",
+        "btn_generar": "Générer le DNI",
+        "men_bar_1": "Dossier",
+        "men_arch": "Sortir",
+        "men_bar_2": "Aider",
+        "men_ayu": "À propos de checkDN",
+        "men_ayu_1": "Licence",
+        "men_ayu_2": "Langue",
+        "men_ayu_3": "Contacter",
+        "KEY_test": "VALUE_test",
+        "btn_veri": "CHÈQUE"
     }
 
 
