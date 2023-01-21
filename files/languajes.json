@@ -10,7 +10,8 @@
         "men_ayu_2": "Idioma",
         "men_ayu_3": "Contacto",
         "KEY_test": "VALUE_test",
-        "btn_veri": "VERIFICAR"
+        "btn_veri": "VERIFICAR",
+        "men_acer_de": ""
     },
     "en": {
         "btn_validar": "Validate DNI",
@@ -23,7 +24,8 @@
         "men_ayu_2": "Languaje",
         "men_ayu_3": "Contact",
         "KEY_test": "VALUE_test",
-        "btn_veri": "CHECK"
+        "btn_veri": "CHECK",
+        "men_acer_de": ""
     },
     "fr": {
         "btn_validar": "Valider le DNI",
@@ -36,7 +38,8 @@
         "men_ayu_2": "Langue",
         "men_ayu_3": "Contacter",
         "KEY_test": "VALUE_test",
-        "btn_veri": "CHÈQUE"
+        "btn_veri": "CHÈQUE",
+        "men_acer_de": ""
     },
     "de": {
         "btn_validar": "DNI validieren",
@@ -49,7 +52,22 @@
         "men_ayu_2": "Sprache",
         "men_ayu_3": "Kontakt",
         "KEY_test": "VALUE_test",
-        "btn_veri": "PRÜFEN"
+        "btn_veri": "PRÜFEN",
+        "men_acer_de": ""
+    },
+    "it": {
+        "btn_validar": "Convalida DNI",
+        "btn_generar": "Genera DNI",
+        "men_bar_1": "File",
+        "men_arch": "Esci",
+        "men_bar_2": "Aiuto",
+        "men_ayu": "Informazioni su checkDNI",
+        "men_ayu_1": "Licenza",
+        "men_ayu_2": "Lingua",
+        "men_ayu_3": "Contatto",
+        "KEY_test": "VALUE_test",
+        "btn_veri": "CONTROLLA",
+        "men_acer_de": ""
     }
 
 
