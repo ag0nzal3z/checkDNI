@@ -134,7 +134,7 @@ def menu_contacto():
 def menu_idiomas():
     window = Toplevel()
     window.title("Selector Idioma")
-    window.geometry("140x100")
+    window.geometry("140x120")
     # Para los idiomas se usa ISO 639-1
     
     #btn_img1 = PhotoImage(file = "files\images\idioma\Spain.png")
