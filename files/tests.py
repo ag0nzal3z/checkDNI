@@ -93,3 +93,37 @@ if __name__ == "__main__":
     test_lan = lan.load_languaje('es')
     print(test_lan)
     print(test_lan['btn_validar'])
+    
+    # Test reinicio programa
+    def program_restart_test() -> None:
+        import os, sys
+        #print(os.path.abspath(__file__))
+        ruta_este_archivo = os.path.abspath(__file__)
+        print(ruta_este_archivo)
+        print(type(ruta_este_archivo))
+        
+        # Hay que poner un condicional para que si se usa linux sea '/' y si se usa windows sea '\\'
+        lista_ruta_este_archivo = ruta_este_archivo.split(sep='\\')
+        print(lista_ruta_este_archivo)
+        print(type(lista_ruta_este_archivo))
+        
+        lista_ruta_main = lista_ruta_este_archivo[0:-2]
+        print(lista_ruta_main)
+
+        nombre_main = "checkDNI.py"
+        
+        lista_ruta_main.append(nombre_main)
+        print(lista_ruta_main)
+        # Hay que poner un condicional para que si se usa linux sea '/' y si se usa windows sea '\\\\'
+        ruta_main = '\\\\'.join(lista_ruta_main)
+        print(ruta_main)
+        
+        #os.execl(sys.executable, os.path.abspath(__file__), *sys.argv)
+        #os.execl(sys.executable, ruta_main, *sys.argv)
+        
+        
+        print("Se va a reiniciar el programa")
+        print(f"os.execl(sys.executable, ruta_main, *sys.argv)")
+        print("Programa reiniciado correctamente")
+        
+    program_restart_test()
