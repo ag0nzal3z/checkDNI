@@ -206,13 +206,6 @@ def main():
 
     root.config(menu=menubar)
 
-    #######################################################################################################
-    # Habria que generar el hash del archivo languaje y guardarlo en una variable
-    # https://proyectoa.com/algoritmos-hash-en-python-para-cadenas-de-texto-y-ficheros/
-    # Con un condicional, comprobar si el hash ha cambiado
-    # Si ha cambiado ejecutar un root.destroy() y un main()
-    #######################################################################################################
-
     root.mainloop()
     
 def program_restart() -> None:
