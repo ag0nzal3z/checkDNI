@@ -212,25 +212,33 @@ def program_restart() -> None:
     import os, sys
     #print(os.path.abspath(__file__))
     ruta_este_archivo = os.path.abspath(__file__)
-    print(ruta_este_archivo)
-    print(type(ruta_este_archivo))
+    #print(ruta_este_archivo)
+    #print(type(ruta_este_archivo))
     
     # Hay que poner un condicional para que si se usa linux sea '/' y si se usa windows sea '\\'
-    lista_ruta_este_archivo = ruta_este_archivo.split(sep='\\')
-    print(lista_ruta_este_archivo)
-    print(type(lista_ruta_este_archivo))
-    
-    lista_ruta_main = lista_ruta_este_archivo[0:-2]
-    print(lista_ruta_main)
+    if computer_os != "Linux":
+        lista_ruta_este_archivo = ruta_este_archivo.split(sep='\\')
+        #print(lista_ruta_este_archivo)
+        #print(type(lista_ruta_este_archivo))
+        
+        lista_ruta_main = lista_ruta_este_archivo[0:-2]
+        #print(lista_ruta_main)
 
-    nombre_main = "checkDNI.py"
-    
-    lista_ruta_main.append(nombre_main)
-    print(lista_ruta_main)
-    # Hay que poner un condicional para que si se usa linux sea '/' y si se usa windows sea '\\\\'
-    ruta_main = '\\\\'.join(lista_ruta_main)
-    print(ruta_main)
-    
-    #os.execl(sys.executable, os.path.abspath(__file__), *sys.argv)
-    
-    os.execl(sys.executable, ruta_main, *sys.argv)
+        nombre_main = "checkDNI.py"
+        
+        lista_ruta_main.append(nombre_main)
+        #print(lista_ruta_main)
+        # Hay que poner un condicional para que si se usa linux sea '/' y si se usa windows sea '\\\\'
+        ruta_main = '\\\\'.join(lista_ruta_main)
+        #print(ruta_main)
+        
+        #os.execl(sys.executable, os.path.abspath(__file__), *sys.argv)
+        
+        os.execl(sys.executable, ruta_main, *sys.argv)
+    else:
+        lista_ruta_este_archivo = ruta_este_archivo.split(sep='/')
+        lista_ruta_main = lista_ruta_este_archivo[0:-2]
+        nombre_main = "checkDNI.py"
+        lista_ruta_main.append(nombre_main)
+        ruta_main = '/'.join(lista_ruta_main)
+        os.execl(sys.executable, ruta_main, *sys.argv)
