@@ -1,9 +1,9 @@
+# -*- coding: utf-8 -*-
+
 from files.languajes import Languajes
 lan = Languajes()
-
-
 from files.funciones import main
-    
+
 
 
 if __name__ == "__main__":

@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from tkinter import *
 from files.clases import DNI, Logs
 from tkinter import messagebox
@@ -132,23 +134,30 @@ def menu_contacto():
 def menu_idiomas():
     window = Toplevel()
     window.title("Selector Idioma")
-    window.geometry("140x100")
+    window.geometry("140x120")
+    # Para los idiomas se usa ISO 639-1
     
     #btn_img1 = PhotoImage(file = "files\images\idioma\Spain.png")
     #size_img1 = btn_img1.subsample(1, 1)
     
     #btn_idi1 = Button(window, text="Castellano",image=size_img1, command= lambda:[lan.save_select_languaje('es'), window.destroy() ])
-    btn_idi1 = Button(window, text="Castellano", command= lambda:[lan.save_select_languaje('es'), window.destroy() ])
+    btn_idi1 = Button(window, text="Español", command= lambda:[lan.save_select_languaje('es'), window.destroy(), program_restart()])
     btn_idi1.grid(row=1, column=1, padx=5, pady=5)
     
-    btn_idi2 = Button(window, text="Ingles", command= lambda:[lan.save_select_languaje('en'), window.destroy() ] )
+    btn_idi2 = Button(window, text="Ingles", command= lambda:[lan.save_select_languaje('en'), window.destroy(), program_restart()])
     btn_idi2.grid(row=1, column=2, padx=5, pady=5)
     
-    #btn_idi3 = Button(window, text="ID 3", command= '' )
-    #btn_idi3.grid(row=2, column=1, padx=5, pady=5)
+    btn_idi3 = Button(window, text="Frances", command= lambda:[lan.save_select_languaje('fr'), window.destroy(), program_restart()])
+    btn_idi3.grid(row=2, column=1, padx=5, pady=5)
     
-    #btn_idi4 = Button(window, text="ID 3", command= '' )
-    #btn_idi4.grid(row=2, column=2, padx=5, pady=5)
+    btn_idi4 = Button(window, text="Aleman", command= lambda:[lan.save_select_languaje('de'), window.destroy(), program_restart()])
+    btn_idi4.grid(row=2, column=2, padx=5, pady=5)
+    
+    btn_idi5 = Button(window, text="Italiano", command= lambda:[lan.save_select_languaje('it'), window.destroy(), program_restart()])
+    btn_idi5.grid(row=3, column=1, padx=5, pady=5)
+    
+    #btn_idi6 = Button(window, text="Islandes", command= lambda:[lan.save_select_languaje('is'), window.destroy() ] )
+    #btn_idi6.grid(row=2, column=2, padx=5, pady=5)
     
     window.mainloop()
 
@@ -198,3 +207,38 @@ def main():
     root.config(menu=menubar)
 
     root.mainloop()
+    
+def program_restart() -> None:
+    import os, sys
+    #print(os.path.abspath(__file__))
+    ruta_este_archivo = os.path.abspath(__file__)
+    #print(ruta_este_archivo)
+    #print(type(ruta_este_archivo))
+    
+    # Hay que poner un condicional para que si se usa linux sea '/' y si se usa windows sea '\\'
+    if computer_os != "Linux":
+        lista_ruta_este_archivo = ruta_este_archivo.split(sep='\\')
+        #print(lista_ruta_este_archivo)
+        #print(type(lista_ruta_este_archivo))
+        
+        lista_ruta_main = lista_ruta_este_archivo[0:-2]
+        #print(lista_ruta_main)
+
+        nombre_main = "checkDNI.py"
+        
+        lista_ruta_main.append(nombre_main)
+        #print(lista_ruta_main)
+        # Hay que poner un condicional para que si se usa linux sea '/' y si se usa windows sea '\\\\'
+        ruta_main = '\\\\'.join(lista_ruta_main)
+        #print(ruta_main)
+        
+        #os.execl(sys.executable, os.path.abspath(__file__), *sys.argv)
+        
+        os.execl(sys.executable, ruta_main, *sys.argv)
+    else:
+        lista_ruta_este_archivo = ruta_este_archivo.split(sep='/')
+        lista_ruta_main = lista_ruta_este_archivo[0:-2]
+        nombre_main = "checkDNI.py"
+        lista_ruta_main.append(nombre_main)
+        ruta_main = '/'.join(lista_ruta_main)
+        os.execl(sys.executable, ruta_main, *sys.argv)

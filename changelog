@@ -1,3 +1,14 @@
+[V0.3 (2023-01-29)]
+
+[V0.2 (2023-01-22)]
+
+* Reinicio automatico del programa al cambiar el idioma
+
+[V0.2 (2023-01-21)]
+
+* Agregado el idioma frances, aleman, italiano
+* Agregada la codificacion utf-8 a todos los archivos .py
+
 [V0.2 (2022-10-14)]
 
 * Gestion de la seleccion de idioma mediante funcion lambda
